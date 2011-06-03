@@ -25,7 +25,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import net.sourceforge.czt.java_cup.Main;
+//import net.sourceforge.czt.java_cup.Main;
+import java_cup.Main;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
