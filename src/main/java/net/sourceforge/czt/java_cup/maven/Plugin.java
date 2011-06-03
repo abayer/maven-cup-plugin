@@ -85,13 +85,15 @@ public class Plugin
     getLog().info("CUP: Processing " + grammars.size() + " cup files");
     for (File file : grammars) {
       getLog().info("CUP: Processing " + file.getPath());
-      String className = file.getName().replaceAll(".cup", "");
+      //String className = file.getName().replaceAll(".cup", "");
       try {
         String packageName = getPackage(file);
         String destdir = outputDirectory + fileSep +
           packageName.replace(".", fileSep);
         File destDir = new File(destdir);
-        File destFile = new File(destDir, className + ".java");
+        File destFile = new File(destDir, "SqlParser.java");
+        //        File destFile = new File(destDir, "parser.java");
+        //        File destFile = new File(destDir, className + ".java");
         getLog().debug("CUP: Checking file dates:\n\t" + new Date(destFile.lastModified()) + 
           "= " + destFile + "\n\t" + new Date(file.lastModified()) + "= " +
           file);
@@ -107,8 +109,12 @@ public class Plugin
           if (dumpTables) {args.add("-dump_tables");}
           args.addAll(Arrays.asList("-destdir", destdir,
                                    "-package", packageName,
-                                   "-parser", className,
-                                   "-symbols", "Sym",
+                                    //                                   "-parser", className,
+                                    //                                   "-symbols", "Sym",
+                                    //                                   "-parser", "parser",
+                                    //                                   "-symbols", "sym",
+                                   "-parser", "SqlParser",
+                                   "-symbols", "SqlParserSymbols",
                                    file.getPath()));
           Main.main(args.toArray(new String[0]));
         }

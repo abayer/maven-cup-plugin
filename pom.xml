@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.sourceforge.czt</groupId>
   <artifactId>maven-cup-plugin</artifactId>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.6.3</version>
   <packaging>maven-plugin</packaging>
   <name>CZT Cup Maven Plugin</name>
 
@@ -34,6 +34,13 @@
     <url>scm:git:git@github.com:phunt/maven-cup-plugin.git</url>
     <developerConnection>scm:git:git@github.com:phunt/maven-cup-plugin.git</developerConnection>
   </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>gh-pages</id>
+      <url>file:///${basedir}/../maven-cup-plugin-pages/repository/</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
