@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>net.sourceforge.czt</groupId>
+  <artifactId>maven-cup-plugin</artifactId>
+  <version>1.6-SNAPSHOT</version>
+  <versioning>
+    <latest>1.6-SNAPSHOT</latest>
+    <release>1.6-SNAPSHOT</release>
+    <versions>
+      <version>1.6-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20110603063512</lastUpdated>
+  </versioning>
+</metadata>
