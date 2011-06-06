@@ -37,9 +37,15 @@
 
   <distributionManagement>
     <repository>
-      <id>gh-pages</id>
-      <url>file:///${basedir}/../maven-cup-plugin-pages/repository/</url>
+      <id>cdh.thirdparty.repo</id>
+      <url>https://repository.cloudera.com/content/repositories/third-party</url>
+      <name>CDH Third Party Repository</name>
     </repository>
+    <snapshotRepository>
+      <id>cdh.snapshots.repo</id>
+      <url>https://repository.cloudera.com/content/repositories/snapshots</url>
+      <name>CDH Snapshots Repository</name>
+    </snapshotRepository>
   </distributionManagement>
 
   <build>
