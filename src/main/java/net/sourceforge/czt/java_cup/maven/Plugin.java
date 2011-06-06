@@ -150,7 +150,11 @@ public class Plugin
     if (content == null) return;
     for (File file : content) {
       if (file.isDirectory()) collectGrammarFiles(file, list);
-      else list.add(file);
+      else {
+          if (file.getName().endsWith(extension)) {
+              list.add(file);
+          }
+      }
     }
   }
 
